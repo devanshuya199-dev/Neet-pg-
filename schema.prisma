@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CollegeType {
+  Govt
+  Private
+  Deemed
+  Central
+  DNB
+}
+
+enum BranchType {
+  Clinical
+  ParaClinical
+  NonClinical
+}
+
+enum CounselingRound {
+  R1
+  R2
+  R3
+  Stray
+}
+
+enum Quota {
+  AIQ
+  State_Quota
+  DNB
+  Management
+  NRI
+  Central
+}
+
+enum Category {
+  UR
+  OBC
+  EWS
+  SC
+  ST
+  PwD
+}
+
+model College {
+  id                 String   @id @default(uuid()) @db.Uuid
+  name               String   @db.VarChar(255)
+  state              String   @db.VarChar(100)
+  collegeType        CollegeType @map("college_type")
+  establishedYear    Int?     @map("established_year")
+  hospitalBeds       Int?     @map("hospital_beds")
+  stipendYear1       Decimal? @map("stipend_year_1") @db.Decimal(12, 2)
+  stipendYear2       Decimal? @map("stipend_year_2") @db.Decimal(12, 2)
+  stipendYear3       Decimal? @map("stipend_year_3") @db.Decimal(12, 2)
+  bondYears          Int?     @map("bond_years")
+  bondPenaltyInr     Decimal? @map("bond_penalty_in_inr") @db.Decimal(14, 2)
+  createdAt          DateTime @default(now()) @map("created_at")
+  updatedAt          DateTime @updatedAt @map("updated_at")
+
+  cutoffs Cutoff[]
+
+  @@index([state])
+  @@index([collegeType])
+  @@map("colleges")
+}
+
+model Branch {
+  id        String     @id @default(uuid()) @db.Uuid
+  name      String     @db.VarChar(255)
+  type      BranchType
+  cutoffs  Cutoff[]
+
+  @@unique([name])
+  @@map("branches")
+}
+
+model Cutoff {
+  id              String          @id @default(uuid()) @db.Uuid
+  collegeId       String          @map("college_id") @db.Uuid
+  branchId        String          @map("branch_id") @db.Uuid
+  year            Int
+  counselingRound CounselingRound @map("counseling_round")
+  quota           Quota
+  category        Category
+  openingRank     Int             @map("opening_rank")
+  closingRank     Int             @map("closing_rank")
+  feePerAnnum     Decimal         @map("fee_per_annum") @db.Decimal(14, 2)
+  sourceUrl       String?         @map("source_url") @db.Text
+  verifiedAt      DateTime?       @map("verified_at")
+  isMock          Boolean         @default(true) @map("is_mock")
+
+  college College @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+  branch  Branch  @relation(fields: [branchId], references: [id], onDelete: Cascade)
+
+  @@unique([collegeId, branchId, year, counselingRound, quota, category])
+  @@index([year, quota, category])
+  @@index([branchId, closingRank])
+  @@map("cutoffs")
+}
+
+model MarksVsRankHistory {
+  id       String @id @default(uuid()) @db.Uuid
+  year     Int
+  score    Int
+  airMin   Int @map("air_min")
+  airMax   Int @map("air_max")
+
+  @@unique([year, score])
+  @@index([year, score])
+  @@map("marks_vs_rank_history")
+}

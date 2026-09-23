@@ -1,0 +1,39 @@
+{
+  "_note": "Illustrative mock data only. Ranks/fees are not verified counselling records.",
+  "colleges": [
+    {"name":"Maulana Azad Medical College","short":"MAMC Delhi","state":"Delhi","type":"Govt"},
+    {"name":"King George's Medical University","short":"KGMU Lucknow","state":"Uttar Pradesh","type":"Govt"},
+    {"name":"Seth GS Medical College","short":"GMC Mumbai / Seth GS","state":"Maharashtra","type":"Govt"},
+    {"name":"VMMC & Safdarjung Hospital","short":"VMMC Delhi","state":"Delhi","type":"Central"},
+    {"name":"Lady Hardinge Medical College","short":"LHMC Delhi","state":"Delhi","type":"Central"},
+    {"name":"Kasturba Medical College, Manipal","short":"KMC Manipal","state":"Karnataka","type":"Deemed"},
+    {"name":"Christian Medical College, Vellore","short":"CMC Vellore","state":"Tamil Nadu","type":"Private"},
+    {"name":"Amrita School of Medicine","short":"Amrita Kochi","state":"Kerala","type":"Private"},
+    {"name":"GMC Chandigarh","short":"GMC Chandigarh","state":"Chandigarh","type":"Govt"},
+    {"name":"SMS Medical College","short":"SMS Jaipur","state":"Rajasthan","type":"Govt"},
+    {"name":"DNB National Board Accredited Hospital - Delhi","short":"DNB Delhi Hospital","state":"Delhi","type":"DNB"},
+    {"name":"Institute of Medical Sciences, BHU","short":"IMS BHU","state":"Uttar Pradesh","type":"Central"}
+  ],
+  "cutoffs": [
+    {"college":"MAMC Delhi","branch":"MD General Medicine","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":40,"closing_rank":650,"fee_per_annum":150000},
+    {"college":"MAMC Delhi","branch":"MD General Medicine","year":2025,"round":"R2","quota":"AIQ","category":"UR","opening_rank":35,"closing_rank":720,"fee_per_annum":150000},
+    {"college":"MAMC Delhi","branch":"MD Dermatology","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":80,"closing_rank":1200,"fee_per_annum":150000},
+    {"college":"KGMU Lucknow","branch":"MD General Medicine","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":500,"closing_rank":1400,"fee_per_annum":150000},
+    {"college":"KGMU Lucknow","branch":"MD Dermatology","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":300,"closing_rank":1200,"fee_per_annum":150000},
+    {"college":"KGMU Lucknow","branch":"MD Radio-Diagnosis","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":700,"closing_rank":2300,"fee_per_annum":150000},
+    {"college":"Seth GS Medical College","branch":"MD General Medicine","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":300,"closing_rank":1800,"fee_per_annum":150000},
+    {"college":"Seth GS Medical College","branch":"MD Radio-Diagnosis","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":500,"closing_rank":2400,"fee_per_annum":150000},
+    {"college":"VMMC Delhi","branch":"MD General Medicine","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":100,"closing_rank":1100,"fee_per_annum":150000},
+    {"college":"VMMC Delhi","branch":"MD Obstetrics & Gynaecology","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":1200,"closing_rank":4200,"fee_per_annum":150000},
+    {"college":"LHMC Delhi","branch":"MD Obstetrics & Gynaecology","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":600,"closing_rank":3200,"fee_per_annum":150000},
+    {"college":"KMC Manipal","branch":"MD General Medicine","year":2025,"round":"R1","quota":"Management","category":"UR","opening_rank":5000,"closing_rank":11000,"fee_per_annum":6500000},
+    {"college":"KMC Manipal","branch":"MD Dermatology","year":2025,"round":"R1","quota":"Management","category":"UR","opening_rank":7000,"closing_rank":18000,"fee_per_annum":6500000},
+    {"college":"CMC Vellore","branch":"MD General Medicine","year":2025,"round":"R1","quota":"Management","category":"UR","opening_rank":1000,"closing_rank":5000,"fee_per_annum":1800000},
+    {"college":"Amrita Kochi","branch":"MD Radio-Diagnosis","year":2025,"round":"R1","quota":"Management","category":"UR","opening_rank":6000,"closing_rank":15000,"fee_per_annum":1800000},
+    {"college":"GMC Chandigarh","branch":"MD General Medicine","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":300,"closing_rank":1700,"fee_per_annum":150000},
+    {"college":"SMS Jaipur","branch":"MD Radio-Diagnosis","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":700,"closing_rank":1800,"fee_per_annum":150000},
+    {"college":"SMS Jaipur","branch":"MD Dermatology","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":600,"closing_rank":1500,"fee_per_annum":150000},
+    {"college":"DNB Delhi Hospital","branch":"DNB Paediatrics","year":2025,"round":"R1","quota":"DNB","category":"UR","opening_rank":9000,"closing_rank":18000,"fee_per_annum":1000000},
+    {"college":"IMS BHU","branch":"MD General Medicine","year":2025,"round":"R1","quota":"AIQ","category":"UR","opening_rank":200,"closing_rank":1000,"fee_per_annum":150000}
+  ]
+}
